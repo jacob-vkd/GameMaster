@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/ballons/greenballon.glb" type="PackedScene" id=1]
+
+[sub_resource type="Environment" id=1]
+ambient_light_color = Color( 0.541176, 0.541176, 0.541176, 1 )
+
+[sub_resource type="PlaneMesh" id=2]
+
+[sub_resource type="CubeMesh" id=3]
+
+[node name="Root" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.975592, 0.219591, 0, -0.219591, 0.975592, 0.0373819, 1.69533, 2.85217 )
+environment = SubResource( 1 )
+
+[node name="Plane" type="MeshInstance" parent="."]
+transform = Transform( 4.59596, 0, 0.0097808, 0, 0.658, 0, -0.0192516, 0, 2.33498, -0.0461748, 0.193162, -0.271738 )
+mesh = SubResource( 2 )
+
+[node name="Cube" type="MeshInstance" parent="."]
+transform = Transform( 0.384329, -0.227746, -0.290084, 0.329131, 0.265941, 0.338734, 0, -0.545262, 0.286374, 2.44535, 1.36283, 0.157235 )
+mesh = SubResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.546146, 0.83769, 0, -0.83769, 0.546146, 0, 5.23872, 4.63095 )
+shadow_enabled = true
+shadow_color = Color( 0.415686, 0.407843, 0.407843, 1 )
+
+[node name="greenballon" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.85464, 2.01488, 0.38494 )

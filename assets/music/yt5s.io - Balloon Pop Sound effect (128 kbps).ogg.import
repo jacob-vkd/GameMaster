@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/yt5s.io - Balloon Pop Sound effect (128 kbps).ogg-4af207989a274208c4c65f103404f497.oggstr"
+
+[deps]
+
+source_file="res://assets/music/yt5s.io - Balloon Pop Sound effect (128 kbps).ogg"
+dest_files=[ "res://.import/yt5s.io - Balloon Pop Sound effect (128 kbps).ogg-4af207989a274208c4c65f103404f497.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
