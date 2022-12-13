@@ -1,7 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/tools/bicyclePump2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tools/Pump3.gd" type="Script" id=2]
+[ext_resource path="res://assets/ballons/redballon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/ballons/redballon.gd" type="Script" id=4]
 
 [sub_resource type="AnimationNodeAnimation" id=1]
 animation = "BotToHalf001"
@@ -53,6 +55,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0202999, 0.443946, -0.03690
 [node name="AnimationPlayer" parent="bicyclePump" index="2"]
 method_call_mode = 1
 
+[node name="redballon" parent="bicyclePump" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84396, 5.69191, 0 )
+script = ExtResource( 4 )
+
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 10 )
 anim_player = NodePath("../bicyclePump/AnimationPlayer")
@@ -64,3 +70,4 @@ transform = Transform( 0.999944, -0.0105939, 0, 0.0105939, 0.999944, 0, 0, 0, 1,
 shape = SubResource( 12 )
 
 [editable path="bicyclePump"]
+[editable path="bicyclePump/redballon"]

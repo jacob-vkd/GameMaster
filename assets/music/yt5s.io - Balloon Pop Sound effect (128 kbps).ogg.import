@@ -11,5 +11,5 @@ dest_files=[ "res://.import/yt5s.io - Balloon Pop Sound effect (128 kbps).ogg-4a
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
