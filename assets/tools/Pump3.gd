@@ -1,6 +1,7 @@
 extends KinematicBody
 
-var state_machine
+onready var animationtree = get_node("AnimationTree")
+onready var state_machine = animationtree.get("parameters/playback")
 	
 func _physics_process(delta):
 	#if is_network_master():
