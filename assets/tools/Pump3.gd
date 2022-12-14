@@ -3,8 +3,8 @@ extends KinematicBody
 var state_machine
 	
 func _physics_process(delta):
-	if is_network_master():
-		get_input()	
+	#if is_network_master():
+	get_input()	
 
 	
 func get_input():

@@ -11,7 +11,12 @@ config_version=4
 [application]
 
 config/name="Spil"
-run/main_scene="res://balloonGame.tscn"
+run/main_scene="res://Scenes/Matchmaking/Menu/Menu.tscn"
+
+[autoload]
+
+NetworkingSync="*res://Scenes/Matchmaking/Networking/Networking_sync.gd"
+Player="*res://Scenes/Matchmaking/Player/Player.gd"
 
 [display]
 
