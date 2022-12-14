@@ -11,14 +11,13 @@ func _ready():
 		init_game_state()
 	
 	NetworkingSync.send_ready_signal()
-	$GUI/Debug_label.text = "My id: " + str(Player.get_player_id()) + ", others: " + str(_other_players)
 
 func init_game():
 	create_map()
 
 func create_map():
 	var map = load("res://balloonGame.tscn").instance()
-	get_tree().get_root().add_child(map)
+	add_child(map)
 
 func init_game_state():
 	yield(NetworkingSync, "all_ready")

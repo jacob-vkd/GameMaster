@@ -43,9 +43,7 @@ func _on_Start_button_pressed():
 	start_game()
 
 remote func start_game():
-	var map = load("res://balloonGame.tscn").instance()
-	get_tree().get_root().add_child(map)
-	get_tree().get_root().get_node("Game_room").queue_free()
+	get_tree().change_scene("res://Scenes/Matchmaking/Game/Game_manager.tscn")
 
 func _on_Leave_button_pressed():
 	if Player.is_host():
