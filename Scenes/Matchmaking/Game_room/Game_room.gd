@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	#rpc_id(1, "")
 	for player_id in NetworkingSync._open_games[Player.get_game_id()][3]:
 		if player_id != Player.get_player_id():
 			rpc_id(player_id, "update_game_room_player_list")
@@ -41,7 +42,7 @@ func _on_Start_button_pressed():
 		if player_id[0] != Player.get_player_id():
 			rpc_id(player_id[0], "start_game")
 	start_game()
-
+	
 remote func start_game():
 	get_tree().change_scene("res://Scenes/Matchmaking/Game/Game_manager.tscn")
 

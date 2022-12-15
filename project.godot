@@ -17,6 +17,8 @@ run/main_scene="res://Scenes/Matchmaking/Menu/Menu.tscn"
 
 NetworkingSync="*res://Scenes/Matchmaking/Networking/Networking_sync.gd"
 Player="*res://Scenes/Matchmaking/Player/Player.gd"
+Players="*res://Players.tscn"
+Global="*res://Global.gd"
 
 [display]
 

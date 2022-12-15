@@ -1,17 +1,21 @@
 extends KinematicBody
 
 onready var animationtree = get_node("AnimationTree")
-onready var state_machine = animationtree.get("parameters/playback")
-	
+onready var state_machine = animationtree.get("parameters/playback") 
+puppet var current setget puppet_position_set
+
+#puppet var puppet_position = Vector3(0.0,0.0,0.0) setget puppet_position_set
+
+onready var Tween = $Tween
+
 func _physics_process(delta):
-	#if is_network_master():
-	get_input()	
+	if is_network_master():
+		get_input()	
 
 	
 func get_input():
-	var current = state_machine.get_current_node()
+	current = state_machine.get_current_node() 
 	var ballon = get_node("bicyclePump/redballon")
-	
 	if ballon.visible:
 		if Input.is_action_just_pressed("ui_up"):
 			#if pump is on half and up was pressed
@@ -44,6 +48,10 @@ func get_input():
 		
 		
 
+func puppet_position_set(new_value):
+	current = new_value
+	print("New Value: " + current)
 
 func _on_Network_tick_rate_timeout():
-	pass # Replace with function body.
+	if is_network_master():
+		rset_unreliable("current", current)

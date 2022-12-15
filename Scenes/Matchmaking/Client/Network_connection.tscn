@@ -46,6 +46,7 @@ __meta__ = {
 
 [node name="Try_to_connect_to_server_timer" type="Timer" parent="."]
 wait_time = 2.0
+
 [connection signal="pressed" from="Start_button" to="." method="_on_Start_button_pressed"]
 [connection signal="pressed" from="Disconnect_button" to="." method="_on_Disconnect_button_pressed"]
 [connection signal="timeout" from="Try_to_connect_to_server_timer" to="." method="_on_Try_to_connect_to_server_timer_timeout"]

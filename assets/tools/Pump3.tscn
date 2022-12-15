@@ -69,5 +69,12 @@ parameters/playback = SubResource( 11 )
 transform = Transform( 0.999944, -0.0105939, 0, 0.0105939, 0.999944, 0, 0, 0, 1, 0, 1.231, 0 )
 shape = SubResource( 12 )
 
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Network_tick_rate" type="Timer" parent="."]
+wait_time = 0.03
+
+[connection signal="timeout" from="Network_tick_rate" to="." method="_on_Network_tick_rate_timeout"]
+
 [editable path="bicyclePump"]
 [editable path="bicyclePump/redballon"]
