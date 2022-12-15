@@ -22,7 +22,7 @@ transform = Transform( 1, 0, 0, 0, 0.996368, 0.0851564, 0, -0.0851564, 0.996368,
 environment = SubResource( 1 )
 
 [node name="Plane" type="MeshInstance" parent="."]
-transform = Transform( 7.02294, 0, 0.0133161, 0, 0.536, 0, -0.0294178, 0, 3.17897, -0.046, 0, -0.272 )
+transform = Transform( 7.02294, 0, 0.0133161, 0, 0.536, 0, -0.0294178, 0, 3.17897, -0.046, -0.882599, -0.272 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 5 )
 
